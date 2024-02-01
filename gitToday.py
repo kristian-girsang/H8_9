@@ -1,3 +1,35 @@
+from tabulate import tabulate
+
+name = input('Masukkan Nama Lengkap: ')
+hobby = input('Masukkan hobi anda: ')
+email = input('Masukkan email anda: ')
+nilai_uts = int(input('Masukkan nilai UTS anda: '))
+nilai_uas = int(input('Masukkan nilai UAS anda: '))
+
+
+if (nilai_uts + nilai_uas) <= 125 or nilai_uts <= 60 or nilai_uas <= 60:
+    status = 'Gagal'
+else:
+    status = 'Lulus'
+
+
+data = [
+    ["Nama Lengkap", name],
+    ["Hobi", hobby],
+    ["E-mail", email],
+    ["Nilai UTS", nilai_uts],
+    ["Nilai UAS", nilai_uas],
+    ["Status", status]
+]
+
+
+print('\n\n--------------------------')
+print('|   BERIKUT DATA ANDA    |')
+print('--------------------------')
+print(tabulate(data, tablefmt="grid"))
+
+
+
 def to_binary(decimal):
     binary = ''
     if decimal == 0:
