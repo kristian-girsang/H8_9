@@ -69,3 +69,5 @@ print('Desimal: ', decimal)
 print('Binary: ', to_binary(decimal))
 print('Oktal: ', to_oktal(decimal))
 print('Hexadesimal: ', to_hexa(decimal))
+
+print("Aku males bgt buset")
